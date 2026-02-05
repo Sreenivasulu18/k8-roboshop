@@ -12,7 +12,7 @@ spec:
   replicas: 1
   selector:
   # these labels are used to select the pods
-    matchlabels:
+    matchLabels:
       project: roboshop 
       component: redis 
       tier: db 
