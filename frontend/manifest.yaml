@@ -36,7 +36,7 @@ spec:
           periodSeconds: 15
         livenessProbe:
           httpGet:
-            path: /health
+            path: /
             port: liveness-port
           failureThreshold: 1
           periodSeconds: 15
@@ -47,6 +47,7 @@ metadata:
   name: frontend
   namespace: roboshop
 spec:
+  type: LoadBalancer
   selector:
     project: roboshop
     component: frontend
