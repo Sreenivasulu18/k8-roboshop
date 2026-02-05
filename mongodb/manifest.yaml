@@ -27,4 +27,15 @@ spec:
       containers: 
       - name: mongodb
         image: singalasreenivasulu/mongodb:v1 
-        
+        imagePullPolicy: Always
+        readinessProbe:
+          tcpSocket:
+            port: 27017
+          initialDisplaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket: 
+            port: 27017
+          initialDisplaySeconds: 5
+          periodSeconds: 5
+
