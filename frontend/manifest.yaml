@@ -117,8 +117,8 @@ spec:
           subPath: nginx.conf
       voulumes:
       - name: nginx-config
-          configMap:
-            name: frontend
+        configMap:
+          name: frontend
 
 ---
 apiVersion: v1
