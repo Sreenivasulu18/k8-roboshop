@@ -115,7 +115,7 @@ spec:
         - name: nginx-config
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
-      voulumes:
+      volumes:
       - name: nginx-config
         configMap:
           name: frontend
